@@ -1,0 +1,56 @@
+.AccountNav {
+  color: #ddd;
+  display: flex;
+  text-align: right;
+  font-size: 0.9rem;
+  margin-left: auto;
+}
+
+.AccountNav li {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.CartButton {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 15px;
+  background-color: #fc6;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+
+.CartButton:hover {
+  background-color: #fd7;
+}
+
+@media (max-width: 700px) {
+  .AccountNav {
+    text-align: center;
+  }
+
+  .AccountNav li {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .CartButton {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 4px 12px;
+  }
+
+  .CartLabel {
+    display: none;
+  }
+}
+
+@media print {
+  .AccountNav {
+    display: none;
+  }
+}

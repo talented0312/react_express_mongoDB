@@ -1,0 +1,122 @@
+.Modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.Content {
+  position: relative;
+  margin: auto;
+  max-width: 400px;
+  max-height: 100%;
+  border: 1px solid #aaa;
+  padding: 35px;
+  border-radius: 4px;
+  background-color: #fcfcfc;
+  overflow: auto;
+  align-self: center;
+  text-align: center;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-100vh);
+  transition: all 0.3s ease;
+}
+
+.SideContent {
+  position: fixed;
+  top: 0;
+  transform: translateX(-100%);
+  height: 100%;
+  width: 80vw;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px 0;
+  padding-top: 0;
+  transition: transform 0.3s ease;
+  z-index: 501;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ImageContent {
+  margin: auto;
+  color: #fff;
+  border: 2px solid #eee;
+  background-color: #fcfcfc;
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.Show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.Content.Show {
+  transform: translateY(0);
+}
+
+.SideContent.Show {
+  transform: translateX(0);
+}
+
+.CloseButton,
+.CloseButtonAlt,
+.CloseButtonImage {
+  position: absolute;
+  cursor: pointer;
+  z-index: 999;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+}
+
+.CloseButton {
+  font-size: 30px;
+  padding: 0 10px;
+  top: 5px;
+  right: 8px;
+}
+
+.CloseButtonAlt {
+  right: 5px;
+  line-height: 1.2rem;
+  padding: 12px;
+  margin: 10px 0 0 0;
+  font-size: 2.5rem;
+  color: #eee;
+}
+
+.CloseButtonAlt:hover {
+  color: #fff;
+}
+
+.CloseButtonImage {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #eee;
+  color: #eee;
+  font-size: 2.5rem;
+  line-height: 2.3rem;
+  padding: 0 5px;
+  top: -4px;
+  right: -2px;
+}
+
+@media (max-width: 350px) {
+  .Content {
+    padding: 35px 25px;
+  }
+}

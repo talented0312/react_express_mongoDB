@@ -1,0 +1,25 @@
+.Brand {
+  /* margin-right: auto; */
+}
+
+.BrandText {
+  font-size: 2.1rem;
+  color: #eee;
+  font-weight: 500;
+}
+
+.BrandText:hover {
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .BrandText {
+    font-size: 1.6rem;
+  }
+}
+
+@media print {
+  .BrandText {
+    color: #aaa;
+  }
+}
